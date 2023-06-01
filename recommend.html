@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Recommendation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Recommended Food Items</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Food</th>
+                    <th>Protein (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Carbohydrates (g)</th>
+                    <th>Calories</th>
+                    <th>Portion Size</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(recommended_foods|length) %}
+                    {% set food_item = recommended_foods[i] %}
+                    {% set score = recommendation_scores[i] %}
+                    <tr>
+                        <td>{{ food_item.name }}</td>
+                        <td>{{ food_item.protein }}</td>
+                        <td>{{ food_item.fat }}</td>
+                        <td>{{ food_item.carbohydrates }}</td>
+                        <td>{{ food_item.calories }}</td>
+                        <td>{{ food_item.portion_sizes }}</td>
+                        <td>{{ score }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Go Back</a>
+    </div>
+</body>
+</html>
+

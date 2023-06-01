@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LifeNutrition - Macro Tracker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">LifeNutrition</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/foodlog">Food Log</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="mb-4">LifeNutrition - Macro Tracker</h1>
+    <h3>Results</h3>
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Recommended Daily Calorie Intake:</h5>
+        <p>{{ calorie_intake }}</p>
+      </div>
+      <div class="col-md-8">
+        <h5>Macronutrient Distribution:</h5>
+        <p>Protein: {{ protein }} grams</p>
+        <p>Fat: {{ fat }} grams</p>
+        <p>Carbs: {{ carbs }} grams</p>
+      </div>
+    </div>
+      </ul>
+      <hr>
+    <a href="/" class="btn btn-primary">Go Back</a>
+    <a href="/foodlog" class="btn btn-primary">Food Log</a>
+  </div>
+</body>
+</html>
+
+
